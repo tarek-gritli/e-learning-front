@@ -231,7 +231,9 @@ class ApiClient {
   }
 
   async completeCourse(courseId: number): Promise<void> {
-    return this.request(`/courses/${courseId}/complete`, { method: "PATCH" });
+    return this.request(`instructor/courses/${courseId}/complete`, {
+      method: "PATCH",
+    });
   }
 
   async dropFromCourse(courseId: number): Promise<void> {
